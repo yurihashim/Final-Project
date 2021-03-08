@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='finalmain.css'>
+    <script src="https://kit.fontawesome.com/5d98c05ec0.js" crossorigin="anonymous"></script>
+    <title>MAMEYA Coffee</title>
+</head>
+<body>
+
+    <header>
+        <div class="headline">
+            <a href='file:///Users/yurihashim/Documents/Final%20Project/finalhome.html'><h1>MAMEYA Coffee</h1></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/finalhome.html'><li>Home</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Menu.html'><li>Menu</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Shop.html'><li>Shop</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Contact.html'><li>Contact</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/shopcoffee.html">COFFEE</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/equipment.html">EQUIPMENT & MERCH</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/gift.html">GIFT ITEMS</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/shoppingcart.html"><i class="fas fa-shopping-cart fa-2x"></i></a>   
+    </div>
+    
+    <span style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:25px; color:rgb(75, 49, 49);cursor:pointer" onclick="openNav()">&#9776; Shop Category</span>
+    <script>
+    
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <br>
+
+    <h3>Shopping Cart</h3>
+
+    <div class="shopping-cart">
+
+        <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="shopping.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Colombia - 340g</div>
+                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        Quos vel voluptate perspiciatis officia repellendus fugiat voluptatem?<br>
+                        Ipsam dolores quas praesentium iure eius incidunt? Consectetur, placeat?<br>
+                        Quas labore doloribus eius asperiores?</p>
+            </div>
+            <div class="product-price">18.00</div>
+            <div class="product-quantity">
+                <input type="number" value="2" min="1">
+            </div>
+            <div class="product-removal">
+                <button class="remove-product">Remove</button>
+            </div>
+            <div class="product-line-price">18.00</div>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="shopping.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Costa Rica - 340g</div>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Quos vel voluptate perspiciatis officia repellendus fugiat voluptatem?<br>
+                    Ipsam dolores quas praesentium iure eius incidunt? Consectetur, placeat?<br>
+                    Quas labore doloribus eius asperiores?</p>
+            </div>
+            <div class="product-price">19.00</div>
+            <div class="product-quantity">
+                <input type="number" value="2" min="1">
+            </div>
+            <div class="product-removal">
+                <button class="remove-product">Remove</button>
+            </div>
+            <div class="product-line-price">19.00</div>
+        </div>
+
+        <div class="totals">
+            <div class="totals-item">
+                <label>Subtotal</label>
+                <div class="totals-value" id="cart-subtotal">37.00</div>
+            </div>
+            <div class="totals-item">
+                <label>Tax (5%)</label>
+                <div class="totals-value" id="cart-tax">3.60</div>
+            </div>
+            <div class="totals-item">
+                <label>Shipping</label>
+                <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>Grand Total</label>
+                <div class="totals-value" id="cart-total">55.60</div>
+            </div>
+        </div>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/checkout.html#" class="checkoutbtn">Checkout</a>
+    </div>
+
+    <script>
+        /* Set rates + misc */
+        var taxRate = 0.05;
+        var shippingRate = 15.00; 
+        var fadeTime = 300;
+
+        /* Assign actions */
+        $('.product-quantity input').change( function() {
+            updateQuantity(this);
+        });
+
+        $('.product-removal button').click( function() {
+            removeItem(this);
+        });
+
+        /* Recalculate cart */
+        function recalculateCart(){
+            var subtotal = 0;
+  
+            /* Sum up row totals */
+            $('.product').each(function () {
+                subtotal += parseFloat($(this).children('.product-line-price').text());
+            });
+  
+            /* Calculate totals */
+            var tax = subtotal * taxRate;
+            var shipping = (subtotal > 0 ? shippingRate : 0);
+            var total = subtotal + tax + shipping;
+  
+            /* Update totals display */
+            $('.totals-value').fadeOut(fadeTime, function() {
+                $('#cart-subtotal').html(subtotal.toFixed(2));
+                $('#cart-tax').html(tax.toFixed(2));
+                $('#cart-shipping').html(shipping.toFixed(2));
+                $('#cart-total').html(total.toFixed(2));
+                if(total == 0){
+                    $('.checkout').fadeOut(fadeTime);
+                }else{
+                    $('.checkout').fadeIn(fadeTime);
+                }
+                $('.totals-value').fadeIn(fadeTime);
+            });
+        }
+
+        /* Update quantity */
+        function updateQuantity(quantityInput){
+            /* Calculate line price */
+            var productRow = $(quantityInput).parent().parent();
+            var price = parseFloat(productRow.children('.product-price').text());
+            var quantity = $(quantityInput).val();
+            var linePrice = price * quantity;
+  
+            /* Update line price display and recalc cart totals */
+            productRow.children('.product-line-price').each(function () {
+                $(this).fadeOut(fadeTime, function() {
+                    $(this).text(linePrice.toFixed(2));
+                    recalculateCart();
+                    $(this).fadeIn(fadeTime);
+                });
+            });  
+        }
+
+
+        /* Remove item from cart */
+        function removeItem(removeButton){
+        /* Remove row from DOM and recalc cart total */
+            var productRow = $(removeButton).parent().parent();
+            productRow.slideUp(fadeTime, function() {
+                productRow.remove();
+                recalculateCart();
+            });
+        }
+
+    </script>
+
+    <hr>
+
+    <footer>
+        <div class="footerline">
+        <h3>MAMEYA Coffee</h3>
+        </div>
+        <div class="info">
+            <ul>
+                <li>(604) xxx-xxxx</li>
+                <li>10am-5pm</li>
+                <li>xxx st, Vancouver, BC xxx xxx</li>
+                <li>Google Map</li>
+            </ul>
+            <p class="copyright">©️ 2021 MAMEYA Coffee. All rights reserved.</p> 
+        </div>
+        <div class="sns">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram fa-2x"></i></a>   
+        </div>  
+        <br>
+        
+    </footer>
+</body>
+</html>

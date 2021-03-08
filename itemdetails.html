@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='finalmain.css'>
+    <script src="https://kit.fontawesome.com/5d98c05ec0.js" crossorigin="anonymous"></script>
+    <title>MAMEYA Coffee</title>
+</head>
+<body>
+
+    <header>
+        <div class="headline">
+            <a href='file:///Users/yurihashim/Documents/Final%20Project/finalhome.html'><h1>MAMEYA Coffee</h1></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/finalhome.html'><li>Home</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Menu.html'><li>Menu</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Shop.html'><li>Shop</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Location.html'><li>Location</li></a>
+                <a href='file:///Users/yurihashim/Documents/Final%20Project/Contact.html'><li>Contact</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/shopcoffee.html">COFFEE</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/equipment.html">EQUIPMENT & MERCH</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/gift.html">GIFT ITEMS</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/shoppingcart.html"><i class="fas fa-shopping-cart fa-2x"></i></a>  
+    </div>
+    
+    <span style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:25px; color:rgb(75, 49, 49);cursor:pointer" onclick="openNav()">&#9776; Shop Category</span>
+    <script>
+    
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <br>
+
+    <div class="grid-itemdetails">
+        <img src="shopping.jpg" alt="colombia">
+        <h4>Colombia - 340g</h4>
+
+        <h4>Description</h4>
+        <p class="itemdetail1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Ducimus expedita hic nesciunt enim aliquam unde modi consequuntur cupiditate aperiam,<br>
+            voluptas beatae quae, blanditiis animi esse deserunt ea. Perspiciatis, nulla ad!
+            </p>
+
+            <h4>Additional Information</h4>
+        <p class="itemdetail2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Ducimus expedita hic nesciunt enim aliquam unde modi consequuntur cupiditate aperiam,<br>
+            voluptas beatae quae, blanditiis animi esse deserunt ea. Perspiciatis, nulla ad!
+            </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <span class="labelname">Grind</span>
+            <select id="size" name="size" class="form-control">
+                <option>Whole Beans</option>
+                <option>Espresso</option>
+                <option>Filter</option>
+                <option>French Press</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <span class="labelname">Size</span>
+            <select id="color" name="color" class="form-control">
+                <option>1lb</option>
+                <option>2lb</option>
+                <option>3lb</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <span class="labelname">Quantity</span>
+            <select id="color" name="color" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <a href="" class="round-black-btn">Add to Cart</a>
+        <a href="file:///Users/yurihashim/Documents/Final%20Project/shoppingcart.html" class="round-black-btn">Check Your Cart</a>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="footerline">
+        <h3>MAMEYA Coffee</h3>
+        </div>
+        <div class="info">
+            <ul>
+                <li>(604) xxx-xxxx</li>
+                <li>10am-5pm</li>
+                <li>xxx st, Vancouver, BC xxx xxx</li>
+                <li>Google Map</li>
+            </ul>
+            <p class="copyright">©️ 2021 MAMEYA Coffee. All rights reserved.</p> 
+        </div>
+        <div class="sns">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram fa-2x"></i></a>   
+        </div>  
+        <br>
+        
+    </footer>
+</body>
+</html>

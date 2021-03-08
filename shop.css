@@ -1,0 +1,105 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #a09090;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+h3 {
+  color: #4b3131;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+p span {
+  color: lightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-shopping {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  border: solid 10px #4b3131;
+  padding: 10px;
+  margin: 100px 20px;
+}
+
+.grid-shopping a {
+  text-decoration: none;
+  color: #794141;
+}
+
+.grid-shopping h5 {
+  color: #4b3131;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+.grid-shopping .price {
+  color: #4b3131;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-shopping > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-shopping > div img {
+  width: 80%;
+}
+/*# sourceMappingURL=shop.css.map */

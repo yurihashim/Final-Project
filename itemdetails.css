@@ -1,0 +1,93 @@
+.grid-itemdetails {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 40px;
+}
+
+.grid-itemdetails img {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.grid-itemdetails h4 {
+  color: #4b3131;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.grid-itemdetails .itemdetail1, .grid-itemdetails .itemdetail2 {
+  color: #4b3131;
+  font-size: 15px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-itemdetails > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+.row .col-md-6 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+  padding: 10px 200px;
+}
+
+.row .col-md-6 .form-control {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 0px 15px;
+  color: #794141;
+  margin: 10px;
+}
+
+.row .col-md-6 .form-control :focus {
+  outline: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+}
+
+.row .col-md-6 .labelname {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: grey;
+  display: block;
+}
+
+.round-black-btn {
+  border-radius: 4px;
+  background: #794141;
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  padding: 7px 45px;
+  border: solid 2px #794141;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.round-black-btn:hover, .round-black-btn:focus {
+  background: transparent;
+  color: #794141;
+  text-decoration: none;
+}
+/*# sourceMappingURL=itemdetails.css.map */

@@ -1,0 +1,58 @@
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #4b3131;
+  text-align: center;
+  -webkit-text-decoration: underline #794141;
+          text-decoration: underline #794141;
+  margin-top: 100px;
+}
+
+.coffeemenu {
+  text-align: center;
+  list-style: none;
+  line-height: 50px;
+}
+
+.coffeemenu li {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+}
+
+.caffeinefreemenu {
+  text-align: center;
+  list-style: none;
+  line-height: 50px;
+}
+
+.caffeinefreemenu li {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+}
+
+.foodmenu {
+  text-align: center;
+  list-style: none;
+  line-height: 50px;
+}
+
+.foodmenu li {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+}
+
+.bakedgoodsmenu {
+  text-align: center;
+  list-style: none;
+  line-height: 50px;
+  margin-bottom: 300px;
+}
+
+.bakedgoodsmenu li {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #794141;
+}
+/*# sourceMappingURL=menu.css.map */

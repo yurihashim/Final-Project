@@ -1,0 +1,85 @@
+.grid-itemdetails {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 40px; 
+
+    img {
+        width: 50%;  
+        margin-left: 25%;
+    }
+
+    h4{
+        color: rgb(75, 49, 49); 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:20px;
+        text-align: center;
+    }
+    .itemdetail1, .itemdetail2 { 
+        color: rgb(75, 49, 49); 
+        font-size: 15px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+  
+.grid-itemdetails > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.display-flex {
+    display: flex;
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+
+    .col-md-6 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:  rgb(121, 65, 65); 
+        padding: 10px 200px;
+
+        .form-control {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            padding: 0px 15px;
+            color:  rgb(121, 65, 65); 
+            margin: 10px;
+            
+            :focus {
+                outline:auto;
+                box-shadow: none;
+                text-align: center;
+            }
+        }
+        .labelname {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: grey;
+            display: block;
+        
+          }
+    }
+}
+
+.round-black-btn {
+	border-radius: 4px;
+    background: rgb(121, 65, 65); 
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 7px 45px;
+    border: solid 2px  rgb(121, 65, 65); 
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.round-black-btn:hover,.round-black-btn:focus {
+    background: transparent;
+    color:  rgb(121, 65, 65); 
+    text-decoration: none;
+}
